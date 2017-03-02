@@ -1,0 +1,15 @@
+﻿@using MVC_Form_Processing.Models;
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+	ViewBag.Title = "MVC form Processing";
+	var message = ViewBag.Message;
+	var person = (Person)ViewBag.Person;
+}
+
+<h3>@message</h3><br />
+<strong>First name: </strong> @person.firstName<br />
+<strong>Last name: </strong> @person.lastName <br />
+<strong>Date of Birth: @person.birthDate.ToString("dd/MM/yyyy")</strong><br />
+<strong>Age: </strong> @person.age<br /><br />

@@ -1,0 +1,17 @@
+﻿@using MVC_Form_Processing.Controllers
+@{
+	ViewData["Title"] = "MVC form Processing";
+} 
+
+@{
+	var greeting = ViewData["greeting"];
+	var shorttime = ViewData["shortTime"];
+	var day = ViewData["day"];
+	var dayofmonth = ViewData["dayofmonth"];
+	var month = ViewData["month"];
+	var year = ViewData["year"];
+	var daysleft = ViewData["daysleft"];
+}
+<h3>@greeting</h3><br />
+<h4>The time is @shorttime on @day, @month  @dayofmonth, @year</h4><br />
+<h4>@daysleft more days until 2018</h4>

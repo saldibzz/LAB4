@@ -1,0 +1,55 @@
+@model MVC_Form_Processing.Models.Person
+
+@{
+    //ViewData["Title"] = "AddPerson";
+}
+
+<h2>AddPerson</h2>
+
+<form asp-action="AddPerson" asp-controller="Home" method="post">
+	<div class="form-horizontal">
+		
+		<div asp-validation-summary="ModelOnly">
+
+			<div class="form-group">
+				<label asp-for="firstName" class="control-label col-sm-2"></label>
+				<div class="col-sm-10">
+					<input class="form-control" asp-for="firstName" />
+					<span class="text-danger" asp-validation-for="firstName"></span>
+				</div>
+			</div>
+			<div class="form-group">
+				<label asp-for="lastName" class="control-label col-sm-2"></label>
+				<div class="col-sm-10">
+					<input class="form-control" asp-for="lastName" />
+					<span class="text-danger" asp-validation-for="lastName"></span>
+				</div>
+			</div>
+			<div class="form-group">
+				<label asp-for="birthDate" class="control-label col-sm-2"></label>
+				<div class="col-sm-10">
+					<input class="form-control" asp-for="birthDate" />
+					<span class="text-danger" asp-validation-for="birthDate"></span>
+				</div>
+			</div>
+			<div class="form-group">
+				<label asp-for="age" class="control-label col-sm-2"></label>
+				<div class="col-sm-10">
+					<input class="form-control" asp-for="age" />
+					<span class="text-danger" asp-validation-for="age"></span>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<button class="btn btn-primary" type="submit">Add Person</button>
+			</div>
+		</div>
+		</div>
+	<div class="col-sm-4">
+		@if (ViewBag.Message != null)
+			{
+			<h1>@ViewBag.Message</h1>
+			}
+	</div>
+		
+</form>
